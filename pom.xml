@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.gitlab.hillel.dnepr.java.ee</groupId>
-    <artifactId>root</artifactId>
+    <artifactId>java_ee_course</artifactId>
     <!-- https://semver.org/lang/ru/ -->
     <version>1.0.0.0</version>
     <packaging>pom</packaging>

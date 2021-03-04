@@ -6,7 +6,7 @@
 
     <parent>
         <groupId>com.gitlab.hillel.dnepr.java.ee</groupId>
-        <artifactId>root</artifactId>
+        <artifactId>java_ee_course</artifactId>
         <version>1.0.0.0</version>
     </parent>
 
