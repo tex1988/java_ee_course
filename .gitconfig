@@ -1,0 +1,8 @@
+[core]
+	filemode = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+	longpaths = true
+	autocrlf = true
+	fscache = true
