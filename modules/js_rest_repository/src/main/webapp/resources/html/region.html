@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomeWork 12 JavaScript</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <form id="get_form">
+        <h3>GET REGION</h3>
+        <ul class="flex-outer">
+            <li>
+                <label for="get_id">ID:</label>
+                <input type="text" id="get_id" placeholder="Enter ID">
+            </li>
+            <li>
+                <button type="button" class="get_button">Submit GET</button>
+            </li>
+        </ul>
+    </form>
+    <div id="get_entity_info">
+        <br>
+    </div>
+    <form id="post_form">
+        <h3>SAVE REGION</h3>
+        <ul class="flex-outer">
+            <li>
+                <label for="post_id">ID</label>
+                <input type="number" id="post_id" placeholder="Enter ID">
+            </li>
+            <li>
+                <label for="post_name">Region name</label>
+                <input type="text" id="post_name" placeholder="Enter region name here">
+            </li>
+            <li>
+                <label for="post_countryName">Country name</label>
+                <input type="text" id="post_countryName" placeholder="Enter country name here">
+            </li>
+            <li>
+                <button type="button" class="post_button">Submit SAVE</button>
+            </li>
+        </ul>
+    </form>
+    <div id="post_entity_info">
+        <br>
+    </div>
+    <form id="put_form">
+        <h3>UPDATE REGION</h3>
+        <ul class="flex-outer">
+            <li>
+                <label for="put_id">ID</label>
+                <input type="number" id="put_id" placeholder="Enter ID">
+            </li>
+            <li>
+                <label for="put_name">Region name</label>
+                <input type="text" id="put_name" placeholder="Enter city name here">
+            </li>
+            <li>
+                <label for="put_countryName">Country name</label>
+                <input type="text" id="put_countryName" placeholder="Enter country name here">
+            </li>
+            <li>
+                <button type="button" class="post_button">Submit SAVE</button>
+            </li>
+        </ul>
+    </form>
+    <div id="put_entity_info">
+        <br>
+    </div>
+    <form id="delete_form">
+        <h3>DELETE REGION</h3>
+        <ul class="flex-outer">
+            <li>
+                <label for="delete_id">ID</label>
+                <input type="text" id="delete_id" placeholder="Enter ID">
+            </li>
+            <li>
+                <button type="button" class="delete_button">Submit DELETE</button>
+            </li>
+        </ul>
+    </form>
+    <div id="delete_entity_info">
+        <br>
+    </div>
+</div>
+</body>
+
+<script type="text/javascript" src="../js/main.js"></script>
+<script type="text/javascript" src="../js/listenerXmlHttp.js"></script>
+
+</html>

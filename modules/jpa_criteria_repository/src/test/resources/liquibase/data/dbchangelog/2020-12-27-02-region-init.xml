@@ -1,0 +1,18 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <changeSet author="Oleksii Zinkevych" id="002">
+        <createTable tableName="region">
+            <column autoIncrement="false" name="region_id" type="INTEGER">
+                <constraints nullable="false"/>
+            </column>
+            <column name="country_id" type="INTEGER"/>
+            <column name="name" type="VARCHAR(255)"/>
+        </createTable>
+        <addPrimaryKey columnNames="region_id"
+                       constraintName="pk_region_id"
+                       tableName="region"/>
+    </changeSet>
+</databaseChangeLog>

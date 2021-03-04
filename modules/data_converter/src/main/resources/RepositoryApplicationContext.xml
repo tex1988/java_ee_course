@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <import resource="ApplicationContext.xml"/>
+
+    <bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">
+        <property name="location" value="config.properties"/>
+    </bean>
+
+    <bean id="driverManager" class="java.sql.DriverManager"/>
+
+    <bean id="prefixFileCqrsWriteRepository" class="com.gitlab.hillel.dnepr.java.ee.oleksii.zinkevych.cqrs_indexed_repository.PrefixFileCqrsWriteRepository">
+        <constructor-arg index="0" value="${repository.root.path}"/>
+        <constructor-arg index="1" value="com.gitlab.hillel.dnepr.java.ee.oleksii.zinkevych.data_converter.entity.User"/>
+        <constructor-arg index="2" ref="javaObjectSerializer"/>
+        <constructor-arg index="3" value="${repository.file.extension:.bin}"/>
+    </bean>
+
+    <bean id="jdbcCqrsIndexedReadRepository" class="com.gitlab.hillel.dnepr.java.ee.oleksii.zinkevych.jdbc_repository.JdbcCqrsIndexedReadRepository">
+        <constructor-arg index="0" value="#{driverManager.getConnection('${jdbc.url:jdbc:h2:mem:readTest}')}"/>
+        <constructor-arg index="1" value="com.gitlab.hillel.dnepr.java.ee.oleksii.zinkevych.data_converter.entity.User"/>
+    </bean>
+
+    <bean id="jdbcCqrsIndexedCrudRepository" class="com.gitlab.hillel.dnepr.java.ee.oleksii.zinkevych.jdbc_repository.JdbcCqrsIndexedCrudRepository">
+        <constructor-arg index="0" ref="jdbcCqrsIndexedReadRepository"/>
+        <constructor-arg index="1" ref="prefixFileCqrsWriteRepository"/>
+    </bean>
+</beans>

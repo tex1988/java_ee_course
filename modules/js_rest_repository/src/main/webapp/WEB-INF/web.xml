@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+
+    <display-name>oleksii_zinkevych_dz_12_js</display-name>
+    <welcome-file-list>
+        <welcome-file>/resources/html/index.html</welcome-file>
+    </welcome-file-list>
+    <listener>
+        <listener-class>
+            org.springframework.web.context.ContextLoaderListener
+        </listener-class>
+    </listener>
+
+    <context-param>
+        <param-name>contextClass</param-name>
+        <param-value>
+            org.springframework.web.context.support.AnnotationConfigWebApplicationContext
+        </param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>
+            com.gitlab.hillel.dnepr.java.ee.oleksii.zinkevych.js_rest_repository.config.MainConfig
+        </param-value>
+    </context-param>
+
+    <servlet>
+        <servlet-name>userServlet</servlet-name>
+        <servlet-class>com.gitlab.hillel.dnepr.java.ee.oleksii.zinkevych.js_rest_repository.controller.UserController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>userServlet</servlet-name>
+        <url-pattern>/user</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>cityServlet</servlet-name>
+        <servlet-class>com.gitlab.hillel.dnepr.java.ee.oleksii.zinkevych.js_rest_repository.controller.CityController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>cityServlet</servlet-name>
+        <url-pattern>/city</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>regionServlet</servlet-name>
+        <servlet-class>com.gitlab.hillel.dnepr.java.ee.oleksii.zinkevych.js_rest_repository.controller.RegionController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>regionServlet</servlet-name>
+        <url-pattern>/region</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>countryServlet</servlet-name>
+        <servlet-class>com.gitlab.hillel.dnepr.java.ee.oleksii.zinkevych.js_rest_repository.controller.CountryController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>countryServlet</servlet-name>
+        <url-pattern>/country</url-pattern>
+    </servlet-mapping>
+
+</web-app>

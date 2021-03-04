@@ -1,0 +1,20 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <changeSet author="Oleksii Zinkevych" id="007">
+        <createTable tableName="userentity">
+            <column autoIncrement="false" name="id" type="VARCHAR(36)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="fname" type="VARCHAR(255)"/>
+            <column name="lname" type="VARCHAR(255)"/>
+            <column name="age" type="INTEGER"/>
+            <column name="address_id" type="INTEGER"/>
+        </createTable>
+        <addPrimaryKey columnNames="id"
+                       constraintName="pk_user"
+                       tableName="userentity"/>
+    </changeSet>
+</databaseChangeLog>

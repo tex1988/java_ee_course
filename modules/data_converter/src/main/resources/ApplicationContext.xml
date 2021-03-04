@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="csvSerializer" class="com.gitlab.hillel.dnepr.java.ee.oleksii.zinkevych.serializer.CsvSerializer">
+        <constructor-arg index="0" value="com.gitlab.hillel.dnepr.java.ee.oleksii.zinkevych.data_converter.entity.User"/>
+    </bean>
+
+    <bean id="javaObjectSerializer" class="com.gitlab.hillel.dnepr.java.ee.oleksii.zinkevych.serializer.JavaObjectSerializer"/>
+
+    <bean id="csvBinConverter" class="com.gitlab.hillel.dnepr.java.ee.oleksii.zinkevych.data_converter.converter.CsvBinConverter">
+        <constructor-arg index="0" ref="csvSerializer"/>
+        <constructor-arg index="1" ref="javaObjectSerializer"/>
+    </bean>
+</beans>

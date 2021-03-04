@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.gitlab.hillel.dnepr.java.ee</groupId>
+        <artifactId>root</artifactId>
+        <version>1.0.0.0</version>
+    </parent>
+
+
+    <artifactId>modules</artifactId>
+    <version>1.0.0.0</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>utils</module>
+        <module>serializer</module>
+        <module>indexer</module>
+        <module>cqrs_indexed_repository</module>
+        <module>jdbc_repository</module>
+        <module>db_migration</module>
+        <module>jpa_repository</module>
+        <module>jpa_criteria_repository</module>
+        <module>data_converter</module>
+        <module>spring_data_repository</module>
+        <module>rmi_repository</module>
+        <module>spi_and_aop</module>
+        <module>js_rest_repository</module>
+    </modules>
+</project>

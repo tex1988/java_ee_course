@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <include file="/dbchangelog/2020-12-27-01-country-init.xml" relativeToChangelogFile="true"/>
+    <include file="/dbchangelog/2020-12-27-02-region-init.xml" relativeToChangelogFile="true"/>
+    <include file="/dbchangelog/2020-12-27-03-city-init.xml" relativeToChangelogFile="true"/>
+    <include file="/dbchangelog/2020-12-27-04-load-countries.xml" relativeToChangelogFile="true"/>
+    <include file="/dbchangelog/2020-12-27-05-load-regions.xml" relativeToChangelogFile="true"/>
+    <include file="/dbchangelog/2020-12-27-06-load-cities.xml" relativeToChangelogFile="true"/>
+    <include file="/dbchangelog/2021-01-31-01-user-init.xml" relativeToChangelogFile="true"/>
+    <include file="/dbchangelog/2021-01-31-02-load-users.xml" relativeToChangelogFile="true"/>
+    <include file="/dbchangelog/2021-01-31-03-address-init.xml" relativeToChangelogFile="true"/>
+    <include file="/dbchangelog/2021-01-31-04-load-addresses.xml" relativeToChangelogFile="true"/>
+</databaseChangeLog>

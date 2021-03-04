@@ -1,0 +1,25 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <changeSet author="Oleksii Zinkevych" id="005">
+        <loadData encoding="UTF-8"
+                  file="../csv/region.csv"
+                  quotchar="&quot;"
+                  separator=";"
+                  tableName="region"
+                  primaryKey="region_id"
+                  relativeToChangelogFile="true">
+            <column header="region_id"
+                    name="region_id"
+                    type="NUMERIC"/>
+            <column header="country_id"
+                    name="country_id"
+                    type="NUMERIC"/>
+            <column header="name"
+                    name="name"
+                    type="STRING"/>
+        </loadData>
+    </changeSet>
+</databaseChangeLog>
